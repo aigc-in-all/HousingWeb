@@ -1,0 +1,1 @@
+try{var track_protocol="https:"==document.location.protocol?" https://":" http://",sNode=document.createElement("script");sNode.type="text/javascript";sNode.src=track_protocol+"tracklog.58.com/referrer4.js";document.getElementsByTagName("head")[0].appendChild(sNode)}catch(e_track){};
