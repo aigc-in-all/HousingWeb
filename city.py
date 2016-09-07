@@ -31,7 +31,8 @@ def main():
 	except Exception as e:
 		print e 
 		db.rollback()
-	db.close()
+	finally:
+		db.close()
 
 if __name__ == '__main__':
 	main()
