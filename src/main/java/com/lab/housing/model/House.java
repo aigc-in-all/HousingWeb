@@ -7,7 +7,7 @@ public class House {
     private String houseType;
     private String houseArea;
     private String houseFloor;
-    private String rentTyep;
+    private String rentType;
     private String rentRoom;
     private float rentPrice;
     private String img;
@@ -57,12 +57,12 @@ public class House {
         this.houseFloor = houseFloor;
     }
 
-    public String getRentTyep() {
-        return rentTyep;
+    public String getRentType() {
+        return rentType;
     }
 
-    public void setRentTyep(String rentTyep) {
-        this.rentTyep = rentTyep;
+    public void setRentType(String rentType) {
+        this.rentType = rentType;
     }
 
     public String getRentRoom() {
@@ -108,7 +108,7 @@ public class House {
     @Override
     public String toString() {
         return "House [buildName=" + buildName + ", buildRegion=" + buildRegion + ", houseType=" + houseType
-                + ", houseArea=" + houseArea + ", houseFloor=" + houseFloor + ", rentTyep=" + rentTyep + ", rentRoom="
+                + ", houseArea=" + houseArea + ", houseFloor=" + houseFloor + ", rentTyep=" + rentType + ", rentRoom="
                 + rentRoom + ", rentPrice=" + rentPrice + ", img=" + img + ", url=" + url + ", abbr=" + abbr + "]";
     }
 

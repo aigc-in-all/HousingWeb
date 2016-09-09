@@ -1,5 +1,9 @@
 package com.lab.housing.dao;
 
-public class HouseDao {
+import java.util.List;
 
+import com.lab.housing.model.House;
+
+public interface HouseDao {
+    List<House> list(String abbr);
 }

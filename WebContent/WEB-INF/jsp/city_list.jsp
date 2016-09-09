@@ -8,10 +8,15 @@
 <title>首页</title>
 </head>
 <body>
-    <table>
-        <c:forEach items="${city_list }" var="city">
+    <table border="1" align="center" style="text-align: center">
+        <c:forEach items="${map }" var="entry">
             <tr>
-                <td>${city.name }</td>
+                <td colspan="20"><strong>${entry.key }</strong></td>
+            </tr>
+            <tr>
+                <c:forEach items="${entry.value }" var="city">
+                    <td><a href="${pageContext.request.contextPath }/house?abbr=${city.abbr }">${city.name }</a></td>
+                </c:forEach>
             </tr>
         </c:forEach>
     </table>
