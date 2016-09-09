@@ -23,7 +23,7 @@
         <c:forEach items="${list }" var="house">
             <tr>
                 <td><img src="${house.img }" style="width: 120px; height: 80px;" /></td>
-                <td><a href="${house.url }">${house.buildName }</a></td>
+                <td><a href="${house.url }" target="_blank">${house.buildName }</a></td>
                 <td>${house.buildRegion }</td>
                 <td>${house.houseType }</td>
                 <td>${house.houseArea }</td>
