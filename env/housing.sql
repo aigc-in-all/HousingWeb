@@ -1,10 +1,17 @@
+CREATE DATABASE IF NOT EXISTS `housing`;
+
+USE `housing`;
+
+DROP TABLE IF EXISTS `t_city`;
 
 CREATE TABLE `t_city` (
 	`id` int AUTO_INCREMENT, 
 	`abbr` varchar(20) NOT NULL COMMENT '城市简称', 
 	`name` varchar(20) NOT NULL COMMENT '城市名称',
 	PRIMARY KEY (`id`)
-)
+);
+
+DROP TABLE IF EXISTS `t_house`;
 
 CREATE TABLE `t_house` (
 	`id` int NOT NULL AUTO_INCREMENT, 
@@ -20,4 +27,4 @@ CREATE TABLE `t_house` (
 	`url` varchar(100) COMMENT '地址',
 	`c_abbr` varchar(20) COMMENT '城市简称',
 	PRIMARY KEY (`id`)
-)
+);

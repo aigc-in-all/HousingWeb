@@ -16,21 +16,20 @@ import com.lab.housing.model.City;
 @ContextConfiguration("/springmvc.xml")
 public class CityDaoTest {
 
-	@Resource
-	CityDao cityDao;
+    @Resource
+    CityDao cityDao;
 
-	@Test
-	public void testGet() {
-		System.out.println("hello:" + cityDao);
-		City city = cityDao.get("sz");
-		System.out.println("---->" + city);
-	}
+    @Test
+    public void testGet() {
+        City city = cityDao.get("sz");
+        System.out.println("---->" + city);
+    }
 
-	@Test
-	public void testList() {
-		List<City> cs = cityDao.list();
-		for (City c : cs) {
-			System.out.println(c);
-		}
-	}
+    @Test
+    public void testList() {
+        List<City> cs = cityDao.list();
+        for (City c : cs) {
+            System.out.println(c);
+        }
+    }
 }

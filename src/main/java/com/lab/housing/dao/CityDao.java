@@ -6,13 +6,13 @@ import com.lab.housing.model.City;
 
 public interface CityDao {
 
-	void add(City city);
+    void add(City city);
 
-	void delete(String abbr);
+    void delete(String abbr);
 
-	void upate(City city);
+    void upate(City city);
 
-	City get(String abbr);
+    City get(String abbr);
 
-	List<City> list();
+    List<City> list();
 }
