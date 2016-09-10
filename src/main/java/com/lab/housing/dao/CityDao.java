@@ -8,11 +8,11 @@ public interface CityDao {
 
     void add(City city);
 
-    void delete(String abbr);
+    void delete(int id);
 
     void upate(City city);
 
-    City get(String abbr);
+    City get(int id);
 
-    List<City> list();
+    List<City> list(int provinceId);
 }

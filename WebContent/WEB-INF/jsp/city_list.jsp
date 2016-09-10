@@ -15,7 +15,7 @@
             </tr>
             <tr>
                 <c:forEach items="${entry.value }" var="city">
-                    <td><a href="${pageContext.request.contextPath }/house?abbr=${city.abbr }">${city.name }</a></td>
+                    <td><a href="${pageContext.request.contextPath }/house?cid=${city.id }">${city.name }</a></td>
                 </c:forEach>
             </tr>
         </c:forEach>

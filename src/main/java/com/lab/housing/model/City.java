@@ -2,37 +2,49 @@ package com.lab.housing.model;
 
 public class City {
 
-    private String abbr;
-    private String name;
+	private int id;
+	private String abbr;
+	private String name;
+	private int provinceId;
 
-    public City() {
-    }
+	public City() {
+	}
 
-    public City(String abbr, String name) {
-        super();
-        this.abbr = abbr;
-        this.name = name;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getAbbr() {
-        return abbr;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setAbbr(String abbr) {
-        this.abbr = abbr;
-    }
+	public String getAbbr() {
+		return abbr;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setAbbr(String abbr) {
+		this.abbr = abbr;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    @Override
-    public String toString() {
-        return "City [abbr=" + abbr + ", name=" + name + "]";
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getProvinceId() {
+		return provinceId;
+	}
+
+	public void setProvinceId(int provinceId) {
+		this.provinceId = provinceId;
+	}
+
+	@Override
+	public String toString() {
+		return "City [id=" + id + ", abbr=" + abbr + ", name=" + name + ", provinceId=" + provinceId + "]";
+	}
 
 }

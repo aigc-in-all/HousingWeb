@@ -43,11 +43,12 @@ def main():
 				rent_room = house_title[2]
 				build_name = house_title[1]
 
-				cursor.execute('insert into t_house(build_name, build_region, house_type, house_area, \
-					house_floor, rent_type, rent_room, rent_price, img, url, c_abbr) \
-					values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', \
-					(build_name, build_region, house_type, house_area, house_floor, \
-						rent_type, rent_room, rent_price, house_img, house_url, 'sz'))
+				sql = "insert into house(build_name, build_region, house_type, house_area, \
+					house_floor, rent_type, rent_room, rent_price, img, url, c_id)  \
+					values ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', %d)" \
+					% (build_name.strip(), build_region.strip(), house_type.strip(), house_area.strip(), house_floor, \
+						rent_type.strip(), rent_room.strip(), rent_price, house_img.strip(), house_url.strip(), 240)
+				cursor.execute(sql)
 
 				db.commit()
 		except Exception, e:

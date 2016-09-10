@@ -2,114 +2,122 @@ package com.lab.housing.model;
 
 public class House {
 
-    private String buildName;
-    private String buildRegion;
-    private String houseType;
-    private String houseArea;
-    private String houseFloor;
-    private String rentType;
-    private String rentRoom;
-    private float rentPrice;
-    private String img;
-    private String url;
-    private String abbr;
+	private int id;
+	private String buildName;
+	private String buildRegion;
+	private String houseType;
+	private String houseArea;
+	private String houseFloor;
+	private String rentType;
+	private String rentRoom;
+	private float rentPrice;
+	private String img;
+	private String url;
+	private int cityId;
 
-    public House() {
-    }
+	public House() {
+	}
 
-    public String getBuildName() {
-        return buildName;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setBuildName(String buildName) {
-        this.buildName = buildName;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getBuildRegion() {
-        return buildRegion;
-    }
+	public String getBuildName() {
+		return buildName;
+	}
 
-    public void setBuildRegion(String buildRegion) {
-        this.buildRegion = buildRegion;
-    }
+	public void setBuildName(String buildName) {
+		this.buildName = buildName;
+	}
 
-    public String getHouseType() {
-        return houseType;
-    }
+	public String getBuildRegion() {
+		return buildRegion;
+	}
 
-    public void setHouseType(String houseType) {
-        this.houseType = houseType;
-    }
+	public void setBuildRegion(String buildRegion) {
+		this.buildRegion = buildRegion;
+	}
 
-    public String getHouseArea() {
-        return houseArea;
-    }
+	public String getHouseType() {
+		return houseType;
+	}
 
-    public void setHouseArea(String houseArea) {
-        this.houseArea = houseArea;
-    }
+	public void setHouseType(String houseType) {
+		this.houseType = houseType;
+	}
 
-    public String getHouseFloor() {
-        return houseFloor;
-    }
+	public String getHouseArea() {
+		return houseArea;
+	}
 
-    public void setHouseFloor(String houseFloor) {
-        this.houseFloor = houseFloor;
-    }
+	public void setHouseArea(String houseArea) {
+		this.houseArea = houseArea;
+	}
 
-    public String getRentType() {
-        return rentType;
-    }
+	public String getHouseFloor() {
+		return houseFloor;
+	}
 
-    public void setRentType(String rentType) {
-        this.rentType = rentType;
-    }
+	public void setHouseFloor(String houseFloor) {
+		this.houseFloor = houseFloor;
+	}
 
-    public String getRentRoom() {
-        return rentRoom;
-    }
+	public String getRentType() {
+		return rentType;
+	}
 
-    public void setRentRoom(String rentRoom) {
-        this.rentRoom = rentRoom;
-    }
+	public void setRentType(String rentType) {
+		this.rentType = rentType;
+	}
 
-    public float getRentPrice() {
-        return rentPrice;
-    }
+	public String getRentRoom() {
+		return rentRoom;
+	}
 
-    public void setRentPrice(float rentPrice) {
-        this.rentPrice = rentPrice;
-    }
+	public void setRentRoom(String rentRoom) {
+		this.rentRoom = rentRoom;
+	}
 
-    public String getImg() {
-        return img;
-    }
+	public float getRentPrice() {
+		return rentPrice;
+	}
 
-    public void setImg(String img) {
-        this.img = img;
-    }
+	public void setRentPrice(float rentPrice) {
+		this.rentPrice = rentPrice;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public String getImg() {
+		return img;
+	}
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	public void setImg(String img) {
+		this.img = img;
+	}
 
-    public String getAbbr() {
-        return abbr;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public void setAbbr(String abbr) {
-        this.abbr = abbr;
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    @Override
-    public String toString() {
-        return "House [buildName=" + buildName + ", buildRegion=" + buildRegion + ", houseType=" + houseType
-                + ", houseArea=" + houseArea + ", houseFloor=" + houseFloor + ", rentTyep=" + rentType + ", rentRoom="
-                + rentRoom + ", rentPrice=" + rentPrice + ", img=" + img + ", url=" + url + ", abbr=" + abbr + "]";
-    }
+	public int getCityId() {
+		return cityId;
+	}
+
+	public void setCityId(int cityId) {
+		this.cityId = cityId;
+	}
+
+	@Override
+	public String toString() {
+		return "House [id=" + id + ", buildName=" + buildName + ", buildRegion=" + buildRegion + ", houseType=" + houseType + ", houseArea=" + houseArea + ", houseFloor=" + houseFloor + ", rentType="
+				+ rentType + ", rentRoom=" + rentRoom + ", rentPrice=" + rentPrice + ", img=" + img + ", url=" + url + ", cityId=" + cityId + "]";
+	}
 
 }

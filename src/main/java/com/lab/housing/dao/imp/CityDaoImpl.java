@@ -26,48 +26,52 @@ public class CityDaoImpl implements CityDao {
 
     @Override
     public void add(City city) {
-        String sql = "INSERT INTO t_city (name, abbr)" + " VALUES (?, ?)";
+        String sql = "INSERT INTO city (name, abbr)" + " VALUES (?, ?)";
         jdbcTemplate.update(sql, city.getName(), city.getAbbr());
     }
 
     @Override
-    public void delete(String abbr) {
-        String sql = "DELETE FROM t_city WHERE abbr=?";
-        jdbcTemplate.update(sql, abbr);
+    public void delete(int id) {
+        String sql = "DELETE FROM city WHERE id=?";
+        jdbcTemplate.update(sql, id);
     }
 
     @Override
     public void upate(City city) {
-        String sql = "UPDATE t_city SET name=? WHERE abbr=?";
+        String sql = "UPDATE city SET name=? WHERE abbr=?";
         jdbcTemplate.update(sql, city.getName(), city.getAbbr());
     }
 
     @Override
-    public City get(String abbr) {
-        String sql = "SELECT * FROM t_city WHERE abbr=?";
-        return jdbcTemplate.queryForObject(sql, new Object[] { abbr }, new RowMapper<City>() {
+    public City get(int id) {
+        String sql = "SELECT * FROM city WHERE id=?";
+        return jdbcTemplate.queryForObject(sql, new Object[] { id }, new RowMapper<City>() {
 
             @Override
             public City mapRow(ResultSet rs, int rowNum) throws SQLException {
                 City c = new City();
+                c.setId(rs.getInt("id"));
                 c.setName(rs.getString("name"));
                 c.setAbbr(rs.getString("abbr"));
+                c.setProvinceId(rs.getInt("p_id"));
                 return c;
             }
         });
     }
 
     @Override
-    public List<City> list() {
-        String sql = "SELECT * FROM t_city";
+    public List<City> list(int provinceId) {
+    	String sql = "SELECT * FROM city where p_id = " + provinceId;
         List<City> cities = jdbcTemplate.query(sql, new RowMapper<City>() {
 
             @Override
             public City mapRow(ResultSet rs, int rowNum) throws SQLException {
-                City city = new City();
-                city.setName(rs.getString("name"));
-                city.setAbbr(rs.getString("abbr"));
-                return city;
+            	City c = new City();
+                c.setId(rs.getInt("id"));
+                c.setName(rs.getString("name"));
+                c.setAbbr(rs.getString("abbr"));
+                c.setProvinceId(rs.getInt("p_id"));
+                return c;
             }
         });
 
