@@ -8,31 +8,37 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <table border="1" align="center">
-        <tr>
-            <td>图片</td>
-            <td>名称</td>
-            <td>区域</td>
-            <td>类型</td>
-            <td>面积</td>
-            <td>楼层</td>
-            <td>类型</td>
-            <td>房间</td>
-            <td>价格</td>
-        </tr>
-        <c:forEach items="${list }" var="house">
+    <c:if test="${empty list }">
+        该城市还没有数据，试试<strong><a href="<c:url value="house?cid=240"/>">深圳</a></strong>吧！
+    </c:if>
+    <c:if test="${not empty list }">
+        <table border="1" align="center">
             <tr>
-                <td><img src="${house.img }" style="width: 120px; height: 80px;" /></td>
-                <td><a href="${house.url }" target="_blank">${house.buildName }</a></td>
-                <td>${house.buildRegion }</td>
-                <td>${house.houseType }</td>
-                <td>${house.houseArea }</td>
-                <td>${house.houseFloor }</td>
-                <td>${house.rentType }</td>
-                <td>${house.rentRoom }</td>
-                <td>${house.rentPrice }</td>
+                <td>图片</td>
+                <td>名称</td>
+                <td>区域</td>
+                <td>类型</td>
+                <td>面积</td>
+                <td>楼层</td>
+                <td>类型</td>
+                <td>房间</td>
+                <td>价格</td>
             </tr>
-        </c:forEach>
-    </table>
+            <c:forEach items="${list }" var="house">
+                <tr>
+                    <td><img src="${house.img }" style="width: 120px; height: 80px;" /></td>
+                    <td><a href="${house.url }" target="_blank">${house.buildName }</a></td>
+                    <td>${house.buildRegion }</td>
+                    <td>${house.houseType }</td>
+                    <td>${house.houseArea }</td>
+                    <td>${house.houseFloor }</td>
+                    <td>${house.rentType }</td>
+                    <td>${house.rentRoom }</td>
+                    <td>${house.rentPrice }</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </c:if>
+    
 </body>
 </html>
