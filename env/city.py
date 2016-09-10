@@ -11,9 +11,9 @@ db = MySQLdb.connect("localhost", "root", "heqingbao", "housing", charset='utf8'
 url = "http://www.58.com/changecity.aspx"
 
 def main():
-	# response = requests.get(url)
-	# html = BeautifulSoup(response.text)
-	html = BeautifulSoup(open("city.html"))
+	response = requests.get(url)
+	html = BeautifulSoup(response.text)
+	# html = BeautifulSoup(open("city.html"))
 	cities = {}
 	clist = html.select('clist')
 	for dt in html.find_all('dt'):

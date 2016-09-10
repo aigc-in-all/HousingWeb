@@ -18,7 +18,7 @@ import com.lab.housing.model.Province;
 @ContextConfiguration("/springmvc.xml")
 public class CityDaoTest {
 
-	@Resource
+    @Resource
     ProvinceDao provinceDao;
 
     @Resource
@@ -32,7 +32,7 @@ public class CityDaoTest {
 
     @Test
     public void testList() {
-    	Province p = provinceDao.get(1);
+        Province p = provinceDao.get(1);
         List<City> cs = cityDao.list(p.getId());
         for (City c : cs) {
             System.out.println(c);

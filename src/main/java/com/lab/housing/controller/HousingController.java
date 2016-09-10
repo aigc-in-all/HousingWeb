@@ -21,7 +21,7 @@ import com.lab.housing.model.Province;
 @Controller
 public class HousingController {
 
-	@Resource
+    @Resource
     private ProvinceDao provinceDao;
 
     @Resource
@@ -32,13 +32,13 @@ public class HousingController {
 
     @RequestMapping("/")
     public ModelAndView home() {
-    	Map<String, List<City>> map = new LinkedHashMap<>();
+        Map<String, List<City>> map = new LinkedHashMap<>();
 
-    	List<Province> ps = provinceDao.list();
-    	for (Province p : ps) {
-			List<City> cs = cityDao.list(p.getId());
-			map.put(p.getName(), cs);
-		}
+        List<Province> ps = provinceDao.list();
+        for (Province p : ps) {
+            List<City> cs = cityDao.list(p.getId());
+            map.put(p.getName(), cs);
+        }
 
         ModelAndView view = new ModelAndView("city_list");
         view.addObject("map", map);
@@ -46,7 +46,7 @@ public class HousingController {
     }
 
     @RequestMapping("/house")
-    public ModelAndView house(@RequestParam(value="cid") int cityId) {
+    public ModelAndView house(@RequestParam(value = "cid") int cityId) {
         List<House> houses = houseDao.list(cityId);
         ModelAndView view = new ModelAndView("house_list");
         view.addObject("list", houses);

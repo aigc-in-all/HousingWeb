@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+body {
+	text-align: left;
+	font-size: 14px;
+	background: #f9f9f9;
+	font-family: font-family:Arial, "宋体" , sans-serif;
+	line-height: 200%;
+}
+
+#header {
+	background: #fff;
+	width: 100%;
+	border-bottom: 2px solid #ff7200;
+}
+
+#headerinside {
+	height: 240px;
+	position: relative;
+	width: 990px;
+	margin: 0 auto;
+	z-index: 10000;
+}
+
+#logo {
+	background-position: 9px 63px;
+	position: absolute;
+	left: 20px;
+	top: 98px;
+	width: 230px;
+	padding-bottom: 22px;
+	z-index: 999;
+}
+
+#flashimg {
+	position: absolute;
+	width: 300px;
+	height: 240px;
+	overflow: hidden;
+	left: 232px;
+	bottom: 0;
+	z-index: 662;
+}
+
+#flashimg img {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+}
+
+#postgg {
+	background: url(http://pic2.58.com/ui6/www/wpic_2.gif?20160506) no-repeat;
+	background-position: 0 -54px;
+	width: 443px;
+	height: 105px;
+	position: absolute;
+	right: -50px;
+	bottom: 0;
+	line-height: 26px;
+	padding: 105px 40px 0 60px;
+	z-index: 666;
+	
+}
+
+#clist {
+	/* background-color: red; */
+	width: 990px;
+	margin: 0 auto;
+	padding: 0 0 20px;
+	clear: both;
+	overflow: hidden;
+}
+
+#clist dt {
+	width: 50px;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	float: left;
+	padding: 3px 0 3px 4px;
+	color: #545454;
+	clear: both;
+}
+
+body,dl,dt,dd {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #0000CC;
+	margin: 0 3px;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e40000;
+}.c6{color:green}
+
+#clist dd {
+	width: 936px;
+	float: left;
+	margin-left: 0;
+	padding: 3px 0;
+}
+
+#clist dd a {
+	display: inline-block;
+	font-size: 12px;
+	margin-right: 12px;
+	white-space: nowrap;
+	text-decoration: none;
+}

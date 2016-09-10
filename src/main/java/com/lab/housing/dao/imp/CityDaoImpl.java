@@ -61,12 +61,12 @@ public class CityDaoImpl implements CityDao {
 
     @Override
     public List<City> list(int provinceId) {
-    	String sql = "SELECT * FROM city where p_id = " + provinceId;
+        String sql = "SELECT * FROM city where p_id = " + provinceId;
         List<City> cities = jdbcTemplate.query(sql, new RowMapper<City>() {
 
             @Override
             public City mapRow(ResultSet rs, int rowNum) throws SQLException {
-            	City c = new City();
+                City c = new City();
                 c.setId(rs.getInt("id"));
                 c.setName(rs.getString("name"));
                 c.setAbbr(rs.getString("abbr"));

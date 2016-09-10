@@ -29,4 +29,6 @@
 
     <context:property-placeholder location="classpath:jdbc.properties" />
 
+    <mvc:resources location="/resources/" mapping="/resources/**" />
+
 </beans>
