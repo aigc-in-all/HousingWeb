@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" style="text/css" href="<c:url value="/resources/css/house_list.css"/>" />
-<title>Insert title here</title>
+<title>品牌公寓</title>
 </head>
 <body>
 

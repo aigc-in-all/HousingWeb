@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" style="text/css"
     href="<c:url value="/resources/css/city_list.css"/>">
-<title>首页</title>
+<title>城市列表</title>
 </head>
 <body>
 
