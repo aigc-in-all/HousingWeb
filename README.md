@@ -6,6 +6,10 @@
 
 这个项目主要是通过抓取[58](http://www.58.com)上面的房源信息存储到本地，然后通过Web端展示出来。Web框架使用SpringMVC，数据库使用MySQL。
 
+城市及省份信息来自：http://www.58.com/changecity.aspx
+
+房源信息来自：http://sz.58.com/pinpaigongyu/
+
 涉及到的知识点有：
 * Python抓取网页数据
 * MySQL数据库
