@@ -1,0 +1,127 @@
+body {
+	background: #f2f2f2;
+}
+
+body, div, p, ul, li, p, dl, dt, dd, h2 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a, a:link, a:hover, a:visited, a:active {
+	text-decoration: none;
+}
+
+.main {
+	width: 1024px;
+	background: #fff;
+	margin: 0 auto;
+}
+
+.main li {
+	padding: 20px;
+	padding-right: 44px;
+	border-top: 1px solid #f2f2f2;
+	position: relative;
+}
+
+.main li:hover {
+	background: #fcfbf5;
+}
+
+.main li a {
+	display: block;
+	width: 100%;
+	height: 150px;
+}
+
+.main img {
+	width: 240px;
+	height: 150px;
+	overflow: hidden;
+	float: left;
+}
+
+.main .des {
+	color: #4a4a4a;
+	line-height: 24px;
+	float: left;
+	margin-left: 20px;
+}
+
+.main .des .room {
+	margin-top: 20px;
+	line-height: 20px;
+	color: #b4b4b4;
+	font-size: 14px;
+}
+
+.main .money {
+	width: 176px;
+	margin-top: 40px;
+	float: right;
+}
+
+.main .money span {
+	font-size: 14px;
+	color: #757575;
+}
+
+.main .money span b {
+	font-size: 40px;
+	font-weight: 400;
+	color: #cdaa3a;
+}
+
+.page {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 28px;
+	margin: 40px auto;
+}
+
+.page strong {
+	border: 1px solid #cdaa3a;
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #cdaa3a;
+	color: #fff;
+	font-weight: 400;
+	line-height: 26px;
+	display: inline-block;
+}
+
+.page a {
+	color: #bfbfbf;
+	border: 1px solid #d4d4d4;
+	padding: 0 10px;
+	margin: 0 5px;
+	font-weight: 400;
+	line-height: 26px;
+	background: #fff;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.page a:hover {
+	color: #cdaa3a;
+}
+
+.page .prev, .page .next {
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	padding: 0;
+	background: url(../images/icon-list.png) no-repeat;
+	border: 0 solid transparent;
+	cursor: pointer;
+	text-indent: -999em;
+}
+
+.page .prev {
+	background-position: -31px -327px;
+}
+
+.page .next {
+	background-position: 0 -327px;
+}

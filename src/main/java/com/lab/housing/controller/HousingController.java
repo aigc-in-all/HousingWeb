@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -30,7 +31,7 @@ public class HousingController {
     @Resource
     private HouseDao houseDao;
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView home() {
         Map<String, List<City>> map = new LinkedHashMap<>();
 
@@ -45,11 +46,36 @@ public class HousingController {
         return view;
     }
 
-    @RequestMapping("/house")
-    public ModelAndView house(@RequestParam(value = "cid") int cityId) {
-        List<House> houses = houseDao.list(cityId);
+    @RequestMapping(value="/house", method = RequestMethod.GET)
+    public ModelAndView house(
+            @RequestParam(value = "cid") int cityId,
+            @RequestParam(value = "page", required = false) Integer page) {
+
         ModelAndView view = new ModelAndView("house_list");
-        view.addObject("list", houses);
+
+        page = page == null ? 1 : page;
+
+        int count = houseDao.count();
+        List<House> houses = houseDao.list(cityId, page - 1);
+
+        System.out.println("count:" + count + "houses:" + houses.size());
+
+        if (count > 0) {
+            int mod = count % HouseDao.PAGE_SIZE;
+            int pageCount = mod > 0 ? count / HouseDao.PAGE_SIZE + 1 : count / HouseDao.PAGE_SIZE;
+
+            int[] pages = new int[pageCount];
+            for (int i = 0; i < pageCount; i++) {
+                pages[i] = i + 1;
+            }
+
+            view.addObject("pages", pages);
+            view.addObject("list", houses);
+            view.addObject("pageSize", pages.length);
+        }
+
+        view.addObject("curPage", page);
+        view.addObject("cityId", cityId);
         return view;
     }
 

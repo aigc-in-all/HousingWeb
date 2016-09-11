@@ -25,9 +25,15 @@ public class HouseDaoImpl implements HouseDao {
     }
 
     @Override
-    public List<House> list(int cityId) {
-        String sql = "SELECT * FROM house WHERE c_id=?";
-        List<House> list = jdbcTemplate.query(sql, new Object[] { cityId }, new RowMapper<House>() {
+    public int count() {
+        String sql = "SELECT count(*) FROM house";
+        return jdbcTemplate.queryForObject(sql, Integer.class);
+    }
+
+    @Override
+    public List<House> list(int cityId, int page) {
+        String sql = "SELECT * FROM house WHERE c_id=? LIMIT ?,?";
+        List<House> list = jdbcTemplate.query(sql, new Object[] { cityId, page * PAGE_SIZE, PAGE_SIZE }, new RowMapper<House>() {
 
             @Override
             public House mapRow(ResultSet rs, int rowNum) throws SQLException {

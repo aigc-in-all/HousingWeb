@@ -5,5 +5,9 @@ import java.util.List;
 import com.lab.housing.model.House;
 
 public interface HouseDao {
-    List<House> list(int cityId);
+
+    static final int PAGE_SIZE = 40;
+
+    int count();
+    List<House> list(int cityId, int page);
 }
