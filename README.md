@@ -37,6 +37,11 @@
   python city.py
   python house.py
   ```
+
 3. 运行Web项目
 
-> 数据来自[58同城](http://sz.58.com/pinpaigongyu/)
+### TODO
+
+1. 支持分类搜索
+
+> 数据来自[58同城](http://sz.58.com/pinpaigongyu/)，禁止作为商业用途。
