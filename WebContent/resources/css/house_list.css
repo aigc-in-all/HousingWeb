@@ -12,6 +12,136 @@ a, a:link, a:hover, a:visited, a:active {
 	text-decoration: none;
 }
 
+.conwrap {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.searchbar {
+	background: #fff;
+	height: 70px;
+	min-width: 1040px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .13);
+}
+
+.searchbar .logo {
+	width: 200px;
+	height: 70px;
+	background: url(../images/58logo.png);
+	opacity: 0.9;
+	float: left;
+	margin-right: 100px;
+	float: left;
+}
+
+.sideright {
+	width: 340px;
+	border: 1px solid #f0f0f0;
+	float: right;
+	margin: 15px 0;
+	position: relative;
+	border-radius: 2px;
+}
+
+.sideright input {
+	width: 234px;
+	color: #b1b1b1;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	padding: 8px 8px 8px 26px;
+	background: #fff;
+	border: none;
+	outline: 0;
+	margin: 0;
+	float: left;
+}
+
+.sideright .icon {
+	width: 13px;
+	height: 13px;
+	background: url(../images/icon-list.png) no-repeat;
+	position: absolute;
+	background-position: -68px -327px;
+	top: 12px;
+	left: 8px;
+}
+
+:focus {
+	outline: 0;
+}
+
+.sideright span {
+	cursor: pointer;
+	background: #fff;
+	font-size: 14px;
+	line-height: 36px;
+	width: 64px;
+	text-align: center;
+	color: #cdaa3a;
+	position: absolute;
+	right: -1px;
+	border: 1px solid #f0f0f0;
+	border-left: none;
+	top: -1px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	display: inline-block;
+}
+
+.sideright .line {
+	width: 1px;
+	height: 16px;
+	position: absolute;
+	overflow: hidden;
+	top: 10px;
+	left: 0;
+	background: #f0f0f0;
+	top: 10px
+}
+
+.sideright span.select {
+	background: #cdaa3a;
+	color: #fff;
+	border: 1px solid #cdaa3a;
+}
+
+.sideright.onfo {
+	background: #cdaa3a;
+}
+
+.sideright.onfo .searchbtn {
+	border-color: #cdaa3a
+}
+
+.adbar {
+	width: 1040px;
+	height: 198px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: red;
+}
+
+.adbar .qyrzad {
+	width: 1040px;
+	height: 198px;
+	background: url(../images/qyad.jpg) no-repeat;
+}
+
+.qyrzad a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
 .main {
 	width: 1024px;
 	background: #fff;
@@ -124,4 +254,11 @@ a, a:link, a:hover, a:visited, a:active {
 
 .page .next {
 	background-position: 0 -327px;
+}
+
+.empty {
+	display: block;
+	font-size: 18px;
+	text-align: center;
+	margin: 40px auto;
 }

@@ -58,8 +58,6 @@ public class HousingController {
         int count = houseDao.count();
         List<House> houses = houseDao.list(cityId, page - 1);
 
-        System.out.println("count:" + count + "houses:" + houses.size());
-
         if (count > 0) {
             int mod = count % HouseDao.PAGE_SIZE;
             int pageCount = mod > 0 ? count / HouseDao.PAGE_SIZE + 1 : count / HouseDao.PAGE_SIZE;
