@@ -18,6 +18,13 @@
 * JavaScript
 
 下面是截图：
+
+![](/screenshot/db_1.png)
+
+![](/screenshot/db_2.png)
+
+![](/screenshot/db_3.png)
+
 ![](/screenshot/1.png)
 
 ![](/screenshot/2.png)
