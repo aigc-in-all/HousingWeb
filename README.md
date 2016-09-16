@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
+
 ### 项目介绍
 
 这是一个JavaWeb练手项目，不具有实际意义。
